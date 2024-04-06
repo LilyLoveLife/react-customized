@@ -1,0 +1,28 @@
+{
+  "name": "react-customized",
+  "version": "1.0.0",
+  "description": "customized react",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "utils",
+    "types",
+    "jsx-runtime",
+    "jsx-dev-runtime"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "jsx-runtime",
+    "customized"
+  ],
+  "author": "Lily",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}
