@@ -4,19 +4,18 @@
  * @Author: 
  * @Date: 2024-04-04 21:51:38
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-04-06 23:14:17
+ * @LastEditTime: 2024-04-09 01:46:48
  */
 import React from "react";
 import { hasOwnProperty } from "./utils";
 
 export function createElement(...args) {
-  console.log('=====my react======')
-  debugger
+  console.log('=====react-customized classic======')
   const { type, props } = args;
-  if (props == null || !hasOwnProperty.call(props, "v-if")) {
+  if (props == null || !hasOwnProperty.call(props, "rIf")) {
     return React.createElement.apply(undefined, args);
   }
-  return props["v-if"] ? React.createElement.apply(undefined, args) : "";
+  return props["rIf"] ? React.createElement.apply(undefined, args) : "";
 }
 
 export const { Fragment } = React;

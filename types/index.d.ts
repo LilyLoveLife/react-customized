@@ -1,5 +1,13 @@
+/*
+ * @Description: 
+ * @version: 
+ * @Author: 
+ * @Date: 2024-04-02 23:31:24
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2024-04-09 01:41:05
+ */
 import { createElement } from 'react';
-import { CJSX } from './jsx-namespace';
+import { CJSX, CReact } from './jsx-namespace';
 
 export const jsx: typeof createElement;
 export namespace jsx {
@@ -14,4 +22,12 @@ export namespace jsx {
       extends CJSX.IntrinsicClassAttributes<T> {}
     type IntrinsicElements = CJSX.IntrinsicElements;
   }
+  // namespace React {
+  //   interface HTMLAttributes<T> extends CReact.ReactHTMLAttributes<T> {}
+  // }
 }
+// export namespace React {
+//   interface HTMLAttributes<T> extends CReact.ReactHTMLAttributes<T> {}
+// }
+// export interface HTMLAttributes<T> extends CReact.ReactHTMLAttributes<T> {}
+
