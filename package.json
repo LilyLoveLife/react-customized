@@ -17,6 +17,10 @@
   },
   "keywords": [
     "react",
+    "directive",
+    "r-if",
+    "v-if",
+    "createElement",
     "jsx-runtime",
     "customized"
   ],
