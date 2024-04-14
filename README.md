@@ -8,8 +8,8 @@ Install from the [npm registry](https://www.npmjs.com/) with your package manage
 npm install react-customized
 ```
 ## Usage
-Use with craco
-croco.config.json : 
+Use with craco.
+craco.config.json : 
 ```
     module.exports = {
         reactScriptsVersion: "react-scripts",
@@ -27,7 +27,7 @@ croco.config.json :
     }
 ```
 
-Now only one directive: r-if which means to mount the dom or not, similar to `&&` or `? : ` 
+Now only one directive: r-if which means to mount the dom or not, similar to  `&&`  or  `? : ` 
 ```
     <div r-if={true}>这是一个描述1</div>
     <div r-if={false}>这是一个描述2</div>
