@@ -1,26 +1,15 @@
+/*
+ * @Description: 
+ * @version: 
+ * @Author: 
+ * @Date: 2024-04-04 21:51:38
+ * @LastEditors: Lily
+ * @LastEditTime: 2024-04-14 15:09:28
+ */
 /* eslint-disable no-restricted-syntax */
 
-const transformProps = (props) => {
-  console.log("---props--", props);
-  if (props && hasOwnProperty.call(props, "v-auth")) {
-    const newProps = assign({}, props);
-    // newProps.className = clsx(props.className);
-    return newProps;
-  }
-  return props || {};
-};
 
 const { hasOwnProperty } = Object.prototype;
 
-const { slice } = Array.prototype;
 
-const assign = (target, source) => {
-  for (const key in source) {
-    if (hasOwnProperty.call(source, key)) {
-      target[key] = source[key];
-    }
-  }
-  return target;
-};
-
-export { transformProps, hasOwnProperty, slice, assign };
+export { hasOwnProperty };

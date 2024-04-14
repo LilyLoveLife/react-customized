@@ -4,26 +4,26 @@
  * @Author: 
  * @Date: 2024-04-02 23:31:24
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-04-09 00:24:26
+ * @LastEditTime: 2024-04-14 15:28:03
  */
 import 'react';
 import { HTMLAttributes as  ReactHTMLAttributes} from "react";
 
 
-  type WithCustomizedProp<P> = P & { ['rIf']?: boolean }
+  type WithCustomizedProp<P> = P & { ['r-if']?: boolean }
 
 // unpack all here to avoid infinite self-referencing when defining our own JSX namespace
 type ReactJSXElement = JSX.Element;
 type ReactJSXElementClass = JSX.ElementClass;
-type ReactJSXElementAttributesProperty = JSX.ElementAttributesProperty  & {'rIf'?: boolean};;
+type ReactJSXElementAttributesProperty = JSX.ElementAttributesProperty  & {'r-if'?: boolean};;
 type ReactJSXElementChildrenAttribute = JSX.ElementChildrenAttribute;
 type ReactJSXLibraryManagedAttributes<C, P> = JSX.LibraryManagedAttributes<
   C,
   P
 >;
-type ReactJSXIntrinsicAttributes = JSX.IntrinsicAttributes & {'rIf'?: boolean};
+type ReactJSXIntrinsicAttributes = JSX.IntrinsicAttributes & {'r-if'?: boolean};
 type ReactJSXIntrinsicClassAttributes<T> = JSX.IntrinsicClassAttributes<T>
-type ReactJSXIntrinsicElements = JSX.IntrinsicElements & {'rIf'?: boolean};
+type ReactJSXIntrinsicElements = JSX.IntrinsicElements & {'r-if'?: boolean};
 
 export namespace CJSX {
   interface Element extends ReactJSXElement {}
@@ -41,14 +41,14 @@ export namespace CJSX {
   type IntrinsicElements = {
     [K in keyof ReactJSXIntrinsicElements]: Omit<
       ReactJSXIntrinsicElements[K],
-      'rIf'
+      'r-if'
     > & {
-      ['rIf']?: boolean;
+      ['r-if']?: boolean;
     };
   };
 }
 
-interface CHTMLAttributes<T> extends ReactHTMLAttributes<T> {['rIf']?: boolean;}
+interface CHTMLAttributes<T> extends ReactHTMLAttributes<T> {['r-if']?: boolean;}
 
 export namespace CReact {
   interface HTMLAttributes <T> extends CHTMLAttributes {}
